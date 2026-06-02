@@ -2,26 +2,26 @@
    DESIGN SYSTEM & CSS VARIABLES
    ========================================================================== */
 :root {
-    /* Color Palette (HSL Tailored) */
-    --bg-primary: hsl(220, 20%, 8%);
-    --bg-secondary: hsl(220, 20%, 12%);
-    --bg-tertiary: hsl(220, 20%, 16%);
+    /* Color Palette (Premium Light & Orange Theme) */
+    --bg-primary: hsl(220, 25%, 97%);        /* Soft light structural gray background */
+    --bg-secondary: hsl(0, 0%, 100%);        /* Crisp pure white for cards and sections */
+    --bg-tertiary: hsl(220, 20%, 93%);       /* Soft gray alternative section fill */
     
-    --accent: hsl(38, 95%, 50%);         /* Golden Amber */
-    --accent-glow: hsla(38, 95%, 50%, 0.15);
-    --accent-hover: hsl(38, 95%, 43%);
+    --accent: hsl(16, 95%, 48%);            /* Vibrant Construction Orange (#f97316) */
+    --accent-glow: hsla(16, 95%, 48%, 0.15);
+    --accent-hover: hsl(16, 95%, 41%);
     
-    --text-white: hsl(0, 0%, 98%);
-    --text-muted: hsl(220, 10%, 72%);
-    --text-dark: hsl(220, 20%, 20%);
+    --text-white: hsl(220, 25%, 12%);       /* Heading and primary text - deep slate gray */
+    --text-muted: hsl(220, 12%, 40%);       /* Readable medium gray for body text */
+    --text-dark: hsl(220, 25%, 8%);
     
-    --border: rgba(255, 255, 255, 0.08);
-    --border-focus: hsla(38, 95%, 50%, 0.5);
+    --border: rgba(0, 0, 0, 0.08);          /* Delicate gray border for light theme */
+    --border-focus: hsla(16, 95%, 48%, 0.5);
     
-    /* Card Glassmorphic Effects */
-    --glass-bg: rgba(20, 24, 33, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.06);
-    --glass-shadow: rgba(0, 0, 0, 0.4);
+    /* Card Glassmorphic Effects (Light Theme Refined) */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.06);
+    --glass-shadow: rgba(0, 0, 0, 0.04);
     
     /* Fonts */
     --font-heading: 'Outfit', sans-serif;
@@ -212,7 +212,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(8, 10, 14, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
@@ -220,8 +220,8 @@ img {
 }
 .main-header.scrolled {
     padding: 0.5rem 0;
-    background: rgba(8, 10, 14, 0.9);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -379,7 +379,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(8, 10, 14, 0.95) 20%, rgba(8, 10, 14, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.93) 20%, rgba(255, 255, 255, 0.65) 100%);
     z-index: 1;
 }
 .hero-container {
@@ -394,14 +394,14 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(249, 115, 22, 0.08);
+    border: 1px solid rgba(249, 115, 22, 0.2);
     border-radius: 30px;
     padding: 0.5rem 1.25rem;
     margin-bottom: 2rem;
     font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--text-white);
+    font-weight: 600;
+    color: var(--accent);
 }
 
 .hero-title {
@@ -427,7 +427,7 @@ img {
 .hero-features {
     display: flex;
     gap: 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 2rem;
 }
 .hero-feat-item {
@@ -1083,7 +1083,7 @@ select.form-control {
     left: 0;
     width: 100%;
     padding: 2.5rem;
-    background: linear-gradient(0deg, rgba(8,10,14,0.95) 0%, rgba(8,10,14,0.4) 60%, rgba(8,10,14,0) 100%);
+    background: linear-gradient(0deg, rgba(249, 115, 22, 0.95) 0%, rgba(249, 115, 22, 0.6) 60%, rgba(249, 115, 22, 0) 100%);
     display: flex;
     flex-direction: column;
     transform: translateY(20px);
@@ -1106,19 +1106,19 @@ select.form-control {
     font-family: var(--font-heading);
     font-size: 0.75rem;
     font-weight: 700;
-    color: var(--accent);
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
 }
 .proj-title {
     font-size: 1.35rem;
-    color: var(--text-white);
+    color: #ffffff;
     margin-bottom: 0.25rem;
 }
 .proj-loc {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* ==========================================================================
@@ -1257,9 +1257,16 @@ a.detail-val:hover {
    FOOTER
    ========================================================================== */
 .main-footer {
-    background-color: var(--bg-secondary);
-    border-top: 1px solid var(--border);
+    background-color: hsl(220, 25%, 10%);
+    color: hsl(220, 10%, 75%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 80px 0 0 0;
+}
+.main-footer .fl-bold {
+    color: #ffffff;
+}
+.main-footer h4 {
+    color: #ffffff;
 }
 .footer-grid {
     display: grid;
@@ -1277,7 +1284,6 @@ a.detail-val:hover {
     font-family: var(--font-heading);
     font-size: 1.65rem;
     font-weight: 800;
-    color: var(--text-white);
     letter-spacing: 0.05em;
     line-height: 1;
 }
@@ -1291,7 +1297,7 @@ a.detail-val:hover {
 }
 .footer-desc {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: hsl(220, 10%, 70%);
     margin-bottom: 1rem;
     max-width: 320px;
 }
@@ -1324,7 +1330,7 @@ a.detail-val:hover {
 }
 .footer-grid ul a {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: hsl(220, 10%, 75%);
 }
 .footer-grid ul a:hover {
     color: var(--accent);
@@ -1334,12 +1340,12 @@ a.detail-val:hover {
 .footer-col-contacts p {
     font-size: 0.95rem;
     margin-bottom: 1rem;
-    color: var(--text-muted);
+    color: hsl(220, 10%, 75%);
 }
 
 .footer-bottom {
-    background-color: var(--bg-primary);
-    border-top: 1px solid var(--border);
+    background-color: hsl(220, 25%, 7%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1.5rem 0;
 }
 .fb-container {
@@ -1347,7 +1353,7 @@ a.detail-val:hover {
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: hsl(220, 10%, 60%);
     flex-wrap: wrap;
     gap: 1rem;
 }

@@ -162,10 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Price calculation: area * base_price * material_multiplier
         let totalPrice = area * basePrice * activeMultiplier;
         
-        // Format price to Bulgarian Lev currency format
-        const formattedPrice = new Intl.NumberFormat('bg-BG', {
+        // Format price to Euro currency format
+        const formattedPrice = new Intl.NumberFormat('en-US', {
             style: 'currency',
-            currency: 'BGN',
+            currency: 'EUR',
             maximumFractionDigits: 0
         }).format(totalPrice);
         
